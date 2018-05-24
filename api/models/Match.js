@@ -11,30 +11,32 @@ module.exports = {
 
         duree: {
             type: 'number',
-            required: true,
-            isInteger: true
+            isInteger: true,
+            defaultsTo: 10
         },
         termine: {
             type: "boolean",
-            required: true
+            defaultsTo: false
         },
         en_cours:{
             type:"boolean",
-            required: true
+            defaultsTo: false
         },
         red_score:{
             type: "number",
-            isInteger: true
+            isInteger: true,
+            defaultsTo: 0
         },
         blue_score:{
             type: "number",
-            isInteger: true
+            isInteger: true,
+            defaultsTo: 0
         },
         red_players:{
-            collection: "user"
+            collection: "user",
         },
         blue_players:{
-            collection: "user"
+            collection: "user",
         },
 
         //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
@@ -52,7 +54,8 @@ module.exports = {
         //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
         babyfoot: {
-            model: "babyfoot"
+            model: "babyfoot",
+            required: true
         },
 
         users:{
